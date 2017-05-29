@@ -1,0 +1,40 @@
+Accepted
+こんにちは、Ozy(@ozy4dm)です。
+『ぎゅうぎゅうシーケンス』に挑戦していただきありがとうございます。
+ 
+そして、正解おめでとうございます！！
+この問題は、2月27日発売の『世界で闘うプログラミング力を鍛える本 コーディング面接189問とその解法』
+の中で解説されている問題を少し簡略化したものです。いかがでしたか？
+ラクラク解けてしまった方にとっては少し物足りないかもしれませんが、
+本書にはさまざまな解法や具体的な例が書かれていますので、是非一度手に取ってみてください。
+ 
+ちなみに、私の解答コード(Ruby)は次のようなものでした。
+ 
+
+# ruby
+n = gets.to_i
+v = gets.split.map(&:to_i)
+
+def solve(n, v)
+  e = [1, 2, 3]
+  
+  # eが出現するインデックスのリスト
+  q = Array.new(e.size).map{Array.new}
+  
+  v.each_with_index{|vk, i|
+    # eの各要素が出現するインデックスを抽出
+    e.each_with_index{|ek, j| q[j] << i if vk==ek }
+  }
+  
+  m = Float::INFINITY # 最小値をmとする
+  loop{
+    # どれかが空になったら終わり
+    q.each{|r| return m if r.empty? }
+    
+    t = q.map{|r|r[0]} # qの先頭要素のリスト
+    m = [m, t.max - t.min + 1].min # max-min+1が区間サイズ
+    q[t.index(t.min)].shift # 最小のインデックスは削除
+  }
+end
+
+puts solve(n, v)

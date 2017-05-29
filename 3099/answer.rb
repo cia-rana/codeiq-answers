@@ -1,0 +1,1 @@
+puts $<.map{|l|u,*e=l.scan /\w+/;[-s=e.size,[u,s]*?,]}.sort.map &:last

@@ -1,0 +1,1 @@
+a=b=s=0;gets.split(?,).map{|n|s+=(n.ord/2-47)*(a==n ?1:2)*(b ?(b=n!=?b;5):4);a=n};p s

@@ -1,0 +1,1 @@
+<?=round(exp(fgets(STDIN)-.577));

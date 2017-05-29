@@ -1,0 +1,1 @@
+[KPTE](https://codeiq.jp/q/3099)

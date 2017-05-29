@@ -1,0 +1,1 @@
+float s;main(i,n){scanf("%d",&n);while(s<=n)s+=1./i++;printf("%d",i-1);}

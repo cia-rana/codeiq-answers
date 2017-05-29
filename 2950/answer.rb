@@ -1,0 +1,1 @@
+p (0..n=gets.to_i).map{|m|(n-m)**m}.max

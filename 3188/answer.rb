@@ -1,0 +1,1 @@
+m,n=gets.split.map &:to_i;p (n<m*2?n-m :3*m-n)/2+1

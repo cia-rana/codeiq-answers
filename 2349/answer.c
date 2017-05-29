@@ -1,0 +1,1 @@
+x;main(y){scanf("%d",&x);while(y+=1+x%2,x/=2);printf("%d",y-3);}
